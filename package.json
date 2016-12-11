@@ -18,11 +18,13 @@
   },
   "homepage": "http://jpb12.github.io/tree-viewer/",
   "dependencies": {
+    "clone": "https://registry.npmjs.org/clone/-/clone-1.0.2.tgz",
     "d3": "^3.5.17",
     "jquery": "^2.2.4",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^4.4.6",
+    "react-tree-graph": "^1.0.1",
     "redux": "^3.6.0"
   },
   "devDependencies": {

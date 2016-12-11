@@ -1,6 +1,7 @@
+import clone from 'clone';
 import React from 'react';
-import Tree from './tree';
-import d3 from 'd3';
+import Tree from 'react-tree-graph';
+import { setActiveNode } from '../Reducers/actions';
 
 const propTypes = {
 	activeNode: React.PropTypes.string,
@@ -42,35 +43,34 @@ export default class TreeContainer extends React.PureComponent{
 		}
 		return null;
 	}
+	setClassName(node) {
+		node.children.forEach(this.setClassName, this);
+
+		if (!this.props.filter) {
+			return;
+		}
+
+		node.className = node.name.toLowerCase().indexOf(this.props.filter) === -1
+			? 'node searchExcluded'
+			: 'node searchIncluded';
+	}
 	render() {
-		const margin = [10, 20, 10, 150];
-		const contentWidth = this.props.width - margin[1] - margin[3];
-		const contentHeight = this.props.height - margin[0] - margin[2];
-		
 		let root = this.props.activeNode ? this.getRoot(this.props.data) : this.props.data;
 		
-		root = JSON.parse(JSON.stringify(root));
-		
+		root = clone(root);
+
 		if (this.props.filter) {
 			root = this.buildSubTree(root) || root;
 		}
 		
-		let tree =  d3.layout.tree().size([contentHeight, contentWidth]);
-		let nodes = tree.nodes(root);
-		
-		nodes.forEach(node => {
-			node.y += margin[0];
-		});
-		
-		let links = tree.links(nodes);
-		
+		this.setClassName(root);
+
 		return (
 			<Tree
-				filter={this.props.filter}
+				data={root}
 				height={this.props.height}
 				width={this.props.width}
-				nodes={nodes}
-				links={links}/>);
+				nodeClickHandler={setActiveNode}/>);
 	}
 }
 
