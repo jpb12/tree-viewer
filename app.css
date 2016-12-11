@@ -16,12 +16,12 @@
 	cursor: pointer;
 }
 
-.node text.searchIncluded {
+.node.searchIncluded text {
 	font-weight: bold;
 	font-size: 14px;
 }
 
-.node text.searchExcluded {
+.node.searchExcluded text {
 	opacity: 0.6;
 }
 
