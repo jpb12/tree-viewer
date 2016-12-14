@@ -19,12 +19,11 @@
   "homepage": "http://jpb12.github.io/tree-viewer/",
   "dependencies": {
     "clone": "https://registry.npmjs.org/clone/-/clone-1.0.2.tgz",
-    "d3": "^3.5.17",
     "jquery": "^2.2.4",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^4.4.6",
-    "react-tree-graph": "^1.0.1",
+    "react-tree-graph": "^1.1.0",
     "redux": "^3.6.0"
   },
   "devDependencies": {
@@ -42,8 +41,8 @@
     "webpack": "^1.14.0"
   },
   "scripts": {
-    "build": "webpack -p --progress",
-    "build-dev": "webpack -d --progress --watch",
-    "build-dev-once": "webpack -d --progress"
+    "build": "set NODE_ENV=production && webpack -p --progress",
+    "build-dev": "set NODE_ENV=development && webpack -d --progress --watch",
+    "build-dev-once": "set NODE_ENV=development && webpack -d --progress"
   }
 }
