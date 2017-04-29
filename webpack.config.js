@@ -16,19 +16,18 @@ module.exports = {
 				test: /\.js$/,
 				exclude: /node_modules/,
 				loader: 'babel-loader',
-				query: {
+				options: {
 					presets: ['react', 'es2015', 'es2016']
 				}
 			}, {
 				test: /\.css$/,
-				loader: ExtractTextPlugin.extract('css-loader')
+				use: ExtractTextPlugin.extract({
+					loader: 'css-loader'
+				})
 			}
 		]
 	},
 	plugins: [
-		new webpack.DefinePlugin({
-			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV.trim())
-		}),
 		new HtmlWebpackPlugin({
 			hash: true,
 			favicon: 'favicon.png',
