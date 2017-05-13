@@ -1,8 +1,9 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { setFilter } from '../Reducers/actions';
 
 const propTypes = {
-	filter: React.PropTypes.string.isRequired
+	filter: PropTypes.string.isRequired
 };
 
 export default class Filter extends React.PureComponent{

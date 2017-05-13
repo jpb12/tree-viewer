@@ -1,10 +1,11 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import Filter from './filter';
 import { setActiveNode, setFilter, resize } from '../Reducers/actions';
 
 const propTypes = {
-	filter: React.PropTypes.string.isRequired,
-	timestamp: React.PropTypes.string
+	filter: PropTypes.string.isRequired,
+	timestamp: PropTypes.string
 };
 
 export default class Header extends React.PureComponent{

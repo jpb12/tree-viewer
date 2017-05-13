@@ -1,14 +1,15 @@
 import clone from 'clone';
+import PropTypes from 'prop-types';
 import React from 'react';
 import Tree from 'react-tree-graph';
 import { setActiveNode } from '../Reducers/actions';
 
 const propTypes = {
-	activeNode: React.PropTypes.string,
-	data: React.PropTypes.object,
-	filter: React.PropTypes.string,
-	height: React.PropTypes.number,
-	width: React.PropTypes.number
+	activeNode: PropTypes.string,
+	data: PropTypes.object,
+	filter: PropTypes.string,
+	height: PropTypes.number,
+	width: PropTypes.number
 };
 
 export default class TreeContainer extends React.PureComponent{

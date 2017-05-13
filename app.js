@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDom from 'react-dom';
 import $ from 'jquery';
@@ -13,10 +14,10 @@ import './style.css';
 $(window).on('resize', resize);
 
 const propTypes = {
-	activeNode: React.PropTypes.string,
-	filter: React.PropTypes.string.isRequired,
-	height: React.PropTypes.number.isRequired,
-	width: React.PropTypes.number.isRequired
+	activeNode: PropTypes.string,
+	filter: PropTypes.string.isRequired,
+	height: PropTypes.number.isRequired,
+	width: PropTypes.number.isRequired
 };
 
 class App extends React.PureComponent{
