@@ -68,6 +68,7 @@ export default class TreeContainer extends React.PureComponent{
 
 		return (
 			<Tree
+				animated
 				data={root}
 				height={this.props.height}
 				width={this.props.width}
