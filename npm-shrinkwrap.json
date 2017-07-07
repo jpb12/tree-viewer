@@ -2762,9 +2762,9 @@
       "resolved": "https://registry.npmjs.org/react-redux/-/react-redux-5.0.5.tgz"
     },
     "react-tree-graph": {
-      "version": "1.6.0",
+      "version": "1.7.2",
       "from": "react-tree-graph@latest",
-      "resolved": "https://registry.npmjs.org/react-tree-graph/-/react-tree-graph-1.6.0.tgz"
+      "resolved": "https://registry.npmjs.org/react-tree-graph/-/react-tree-graph-1.7.2.tgz"
     },
     "read-pkg": {
       "version": "1.1.0",
