@@ -72,7 +72,8 @@ export default class TreeContainer extends React.PureComponent{
 				data={root}
 				height={this.props.height}
 				width={this.props.width}
-				nodeClickHandler={setActiveNode}/>);
+				nodeClickHandler={setActiveNode}
+				steps={30}/>);
 	}
 }
 
