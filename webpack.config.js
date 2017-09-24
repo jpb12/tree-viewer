@@ -11,7 +11,7 @@ module.exports = {
 		filename: 'app.js'
 	},
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
@@ -22,7 +22,7 @@ module.exports = {
 			}, {
 				test: /\.css$/,
 				use: ExtractTextPlugin.extract({
-					loader: 'css-loader'
+					use: 'css-loader'
 				})
 			}
 		]
