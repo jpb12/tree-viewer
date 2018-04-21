@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackBar = require('webpackbar');
 
 module.exports = {
 	context: __dirname,
@@ -41,6 +42,7 @@ module.exports = {
 			favicon: 'favicon.png',
 			template: 'index.html'
 		}),
-		new ExtractTextPlugin('app.css')
+		new ExtractTextPlugin('app.css'),
+		new WebpackBar()
 	]
 };
