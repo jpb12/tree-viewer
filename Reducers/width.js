@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import { ActionType } from './actions';
 
-export default function (state, action) {
+export default function(state, action) {
 	if (typeof state === 'undefined') {
 		return $(window).width();
 	} else {

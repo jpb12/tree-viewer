@@ -12,7 +12,7 @@ const propTypes = {
 	width: PropTypes.number
 };
 
-export default class TreeContainer extends React.PureComponent{
+export default class TreeContainer extends React.PureComponent {
 	getRoot(json) {
 		if (json.name === this.props.activeNode) {
 			return json;
@@ -25,8 +25,9 @@ export default class TreeContainer extends React.PureComponent{
 		}
 		return false;
 	}
+
 	buildSubTree(root) {
-		let newChildren = [];		
+		let newChildren = [];
 
 		for (let i = 0; i < root.children.length; i++) {
 			let child = this.buildSubTree(root.children[i]);
@@ -35,15 +36,16 @@ export default class TreeContainer extends React.PureComponent{
 			}
 		}
 
-		if (newChildren.length > 0){
+		if (newChildren.length > 0) {
 			root.children = newChildren;
 		}
 
-		if (newChildren.length > 0 || root.name.toLowerCase().indexOf(this.props.filter.toLowerCase()) !== -1){
+		if (newChildren.length > 0 || root.name.toLowerCase().indexOf(this.props.filter.toLowerCase()) !== -1) {
 			return root;
 		}
 		return null;
 	}
+
 	setClassName(node) {
 		node.children.forEach(this.setClassName, this);
 
@@ -55,15 +57,16 @@ export default class TreeContainer extends React.PureComponent{
 			? 'node searchExcluded'
 			: 'node searchIncluded';
 	}
+
 	render() {
 		let root = this.props.activeNode ? this.getRoot(this.props.data) : this.props.data;
-		
+
 		root = clone(root);
 
 		if (this.props.filter) {
 			root = this.buildSubTree(root) || root;
 		}
-		
+
 		this.setClassName(root);
 
 		return (

@@ -1,6 +1,6 @@
 import { ActionType } from './actions';
 
-export default function (state, action) {
+export default function(state, action) {
 	if (typeof state === 'undefined') {
 		return null;
 	} else {

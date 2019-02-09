@@ -8,14 +8,16 @@ const propTypes = {
 	timestamp: PropTypes.string
 };
 
-export default class Header extends React.PureComponent{
+export default class Header extends React.PureComponent {
 	componentDidMount() {
 		resize();
 	}
+
 	handleClick() {
 		setActiveNode(null);
 		setFilter('');
 	}
+
 	render() {
 		return (
 			<div id="header">

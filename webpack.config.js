@@ -1,7 +1,8 @@
 const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const WebpackBar = require('webpackbar');
 
 module.exports = {
@@ -11,28 +12,27 @@ module.exports = {
 		path: path.join(__dirname, 'build'),
 		filename: 'app.js'
 	},
+	optimization: {
+		minimizer: [
+			new UglifyJsPlugin({
+				cache: true,
+				parallel: true
+			}),
+			new OptimizeCSSAssetsPlugin({})
+		]
+	},
 	module: {
 		rules: [
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				loader: 'babel-loader',
-				options: {
-					presets: [
-						[
-							'env',
-							{
-								'modules': false
-							}
-						],
-						'react'
-					]
-				}
+				loader: 'babel-loader'
 			}, {
 				test: /\.css$/,
-				use: ExtractTextPlugin.extract({
-					use: 'css-loader'
-				})
+				use: [
+					MiniCssExtractPlugin.loader,
+					'css-loader'
+				]
 			}
 		]
 	},
@@ -42,7 +42,9 @@ module.exports = {
 			favicon: 'favicon.png',
 			template: 'index.html'
 		}),
-		new ExtractTextPlugin('app.css'),
+		new MiniCssExtractPlugin({
+			filename: 'app.css'
+		}),
 		new WebpackBar()
 	]
 };

@@ -20,7 +20,7 @@ const propTypes = {
 	width: PropTypes.number.isRequired
 };
 
-class App extends React.PureComponent{
+class App extends React.PureComponent {
 	render() {
 		return (
 			<div id="container">
@@ -42,4 +42,5 @@ ReactDom.render(
 	<Provider store={Store}>
 		<App/>
 	</Provider>,
-	document.getElementById('app'));
+	document.getElementById('app')
+);
