@@ -13,6 +13,10 @@ const propTypes = {
 };
 
 export default class TreeContainer extends React.PureComponent {
+	handleClick(event, node) {
+		setActiveNode(node);
+	}
+
 	getRoot(json) {
 		if (json.name === this.props.activeNode) {
 			return json;
@@ -77,7 +81,7 @@ export default class TreeContainer extends React.PureComponent {
 				width={this.props.width}
 				gProps={{
 					className: 'node',
-					onClick: setActiveNode
+					onClick: this.handleClick
 				}}
 				steps={30}/>);
 	}
