@@ -1,6 +1,6 @@
 Tree Viewer
 ===========
-A tree display using d3, based on the example at http://bl.ocks.org/d3noob/8375092, with several additional features [Demo](https://jpb12.github.io/tree-viewer/):
+A tree display using [react-tree-graph](https://github.com/jpb12/react-tree-graph), based on the example at http://bl.ocks.org/d3noob/8375092, with several additional features. [Demo](https://jpb12.github.io/tree-viewer/):
 
 ![tree](https://raw.githubusercontent.com/jpb12/tree-viewer/gh-pages/images/tree.png)
 
