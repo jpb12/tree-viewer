@@ -83,6 +83,9 @@ export default class TreeContainer extends React.PureComponent {
 					className: 'node',
 					onClick: this.handleClick
 				}}
+				textProps={{
+					dy: 3.5
+				}}
 				steps={30}/>);
 	}
 }
