@@ -1,7 +1,7 @@
 import clone from 'clone';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Tree from 'react-tree-graph';
+import { AnimatedTree } from 'react-tree-graph';
 import { setActiveNode } from '../Reducers/actions';
 
 const propTypes = {
@@ -74,8 +74,7 @@ export default class TreeContainer extends React.PureComponent {
 		this.setClassName(root);
 
 		return (
-			<Tree
-				animated
+			<AnimatedTree
 				data={root}
 				height={this.props.height}
 				width={this.props.width}
