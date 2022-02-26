@@ -24,7 +24,7 @@ In addition, nodes that match the text will be bolded, and other nodes shown wil
 
 Developers
 ----------
-Tree Viewer is implemented in react + redux, and bundled by webpack.  The tree is statically imported from [json.jstree](https://github.com/jpb12/tree-viewer/blob/master/json.js).  This can be replaced with an alternative method, like an AJAX call.
+Tree Viewer is implemented in react + redux, and bundled by webpack.  The tree is statically imported from [json.js](https://github.com/jpb12/tree-viewer/blob/master/json.js).  This can be replaced with an alternative method, like an AJAX call.
 
 To run locally, after cloning the repository, run:
 
