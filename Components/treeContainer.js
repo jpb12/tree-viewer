@@ -51,7 +51,9 @@ export default class TreeContainer extends React.PureComponent {
 	}
 
 	setClassName(node) {
-		node.children.forEach(this.setClassName, this);
+		if (node.children) {
+			node.children.forEach(this.setClassName, this);
+		}
 
 		if (!this.props.filter) {
 			return;
@@ -85,7 +87,8 @@ export default class TreeContainer extends React.PureComponent {
 				textProps={{
 					dy: 3.5
 				}}
-				steps={30}/>);
+				steps={30}/>
+		);
 	}
 }
 

@@ -30,7 +30,8 @@ class App extends React.PureComponent {
 					filter={this.props.filter}
 					height={this.props.height}
 					width={this.props.width}/>
-			</div>);
+			</div>
+		);
 	}
 }
 

@@ -2,52 +2,39 @@ export default {
 	timestamp: '26/02/2022 10:30',
 	name: 'Colour',
 	children: [{
-		name: 'Black',
-		children: []
+		name: 'Black'
 	}, {
 		name: 'Blue',
 		children: [{
-			name: 'Aquamarine',
-			children: []
+			name: 'Aquamarine'
 		}, {
-			name: 'Cyan',
-			children: []
+			name: 'Cyan'
 		}, {
-			name: 'Navy',
-			children: []
+			name: 'Navy'
 		}, {
-			name: 'Turquoise',
-			children: []
+			name: 'Turquoise'
 		}]
 	}, {
-		name: 'Green',
-		children: []
+		name: 'Green'
 	}, {
 		name: 'Purple',
 		children: [{
-			name: 'Indigo',
-			children: []
+			name: 'Indigo'
 		}, {
-			name: 'Violet',
-			children: []
+			name: 'Violet'
 		}]
 	}, {
 		name: 'Red',
 		children: [{
-			name: 'Crimson',
-			children: []
+			name: 'Crimson'
 		}, {
-			name: 'Maroon',
-			children: []
+			name: 'Maroon'
 		}, {
-			name: 'Scarlet',
-			children: []
+			name: 'Scarlet'
 		}]
 	}, {
-		name: 'White',
-		children: []
+		name: 'White'
 	}, {
-		name: 'Yellow',
-		children: []
+		name: 'Yellow'
 	}]
 };

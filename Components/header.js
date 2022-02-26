@@ -25,7 +25,8 @@ export default class Header extends React.PureComponent {
 				<button onClick={this.handleClick}>Reset</button>
 				<a href="https://github.com/jpb12/tree-viewer">View Source</a>
 				<span>Last Updated: {this.props.timestamp}</span>
-			</div>);
+			</div>
+		);
 	}
 }
 

@@ -18,7 +18,8 @@ export default class Filter extends React.PureComponent {
 				type="text"
 				placeholder="Filter nodes..."
 				value={this.props.filter}
-				onChange={this.handleChange}/>);
+				onChange={this.handleChange}/>
+		);
 	}
 }
 

@@ -14,6 +14,7 @@ module.exports = {
 	'plugins': [
 		'react'
 	],
+	'ignorePatterns': ['docs/**', 'node_modules/**', '.eslintrc.js'],
 	'rules': {
 		'array-bracket-newline': ['error', 'consistent'],
 		'array-bracket-spacing': ['error', 'never'],

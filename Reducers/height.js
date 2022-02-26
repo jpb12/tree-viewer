@@ -1,6 +1,6 @@
 import { ActionType } from './actions';
 
-export default function(state, action) {
+export default function HeightReducer(state, action) {
 	if (typeof state === 'undefined') {
 		return window.innerHeight - 25;
 	} else {
