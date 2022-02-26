@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDom from 'react-dom';
-import $ from 'jquery';
 import Header from './Components/header';
 import TreeContainer from './Components/treeContainer';
 import json from './json';
@@ -11,7 +10,7 @@ import { resize } from './Reducers/actions';
 
 import './style.css';
 
-$(window).on('resize', resize);
+window.onresize = resize;
 
 const propTypes = {
 	activeNode: PropTypes.string,

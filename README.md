@@ -20,11 +20,11 @@ Typing into the textbox will redraw the tree only showing nodes that match one o
 2. One of the node's descendants fulfils condition 1.
 3. One of the node's ancestors fulfils condition 1, and none of that ancestor's descendants do.
 
-In addition, nodes that match the text will be bolded, and other nodes shown will be faded.  Clicking the rest button will clear the filter.
+In addition, nodes that match the text will be bolded, and other nodes shown will be faded.  Clicking the reset button will clear the filter.
 
 Developers
 ----------
-Tree Viewer is implemented in react + redux, and bundled by webpack.  The tree is statically imported from json.js.  This can be replaced with an alternative method, like an AJAX call.
+Tree Viewer is implemented in react + redux, and bundled by webpack.  The tree is statically imported from [json.jstree](https://github.com/jpb12/tree-viewer/blob/master/json.js).  This can be replaced with an alternative method, like an AJAX call.
 
 To run locally, after cloning the repository, run:
 
