@@ -8,14 +8,16 @@
     "url": "git+https://github.com/jpb12/tree-viewer.git"
   },
   "keywords": [
-    "d3.js",
-    "tree"
+    "d3",
+    "graph",
+    "react",
+    "react-tree-graph",
+    "svg",
+    "tree",
+    "ui"
   ],
   "author": "James Brierley",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jpb12/tree-viewer/issues"
-  },
   "homepage": "http://jpb12.github.io/tree-viewer/",
   "dependencies": {
     "clone": "^2.1.2",

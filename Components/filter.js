@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { setFilter } from '../Reducers/actions';
 
-const propTypes = {
-	filter: PropTypes.string.isRequired
-};
-
 export default class Filter extends React.PureComponent {
+	static propTypes = {
+		filter: PropTypes.string.isRequired
+	};
+
 	handleChange(e) {
 		setFilter(e.target.value);
 	}
@@ -14,6 +14,7 @@ export default class Filter extends React.PureComponent {
 	render() {
 		return (
 			<input
+				aria-label="Filter nodes"
 				id="search"
 				type="text"
 				placeholder="Filter nodes..."
@@ -22,5 +23,3 @@ export default class Filter extends React.PureComponent {
 		);
 	}
 }
-
-Filter.propTypes = propTypes;

@@ -1,25 +1,25 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDom from 'react-dom';
+import { connect, Provider } from 'react-redux';
 import Header from './Components/header';
 import TreeContainer from './Components/treeContainer';
 import json from './json';
 import Store from './Reducers/store';
-import { connect, Provider } from 'react-redux';
 import { resize } from './Reducers/actions';
 
 import './style.css';
 
 window.onresize = resize;
 
-const propTypes = {
-	activeNode: PropTypes.string,
-	filter: PropTypes.string.isRequired,
-	height: PropTypes.number.isRequired,
-	width: PropTypes.number.isRequired
-};
-
 class App extends React.PureComponent {
+	static propTypes = {
+		activeNode: PropTypes.string,
+		filter: PropTypes.string.isRequired,
+		height: PropTypes.number.isRequired,
+		width: PropTypes.number.isRequired
+	};
+
 	render() {
 		return (
 			<div id="container">
@@ -35,7 +35,6 @@ class App extends React.PureComponent {
 	}
 }
 
-App.propTypes = propTypes;
 App = connect(state => state)(App);
 
 ReactDom.render(

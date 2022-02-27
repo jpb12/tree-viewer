@@ -1,8 +1,8 @@
+import { combineReducers, createStore } from 'redux';
 import ActiveNode from './activeNode';
 import Filter from './filter';
 import Height from './height';
 import Width from './width';
-import { combineReducers, createStore } from 'redux';
 
 export default createStore(
 	combineReducers({

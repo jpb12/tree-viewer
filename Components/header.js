@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Filter from './filter';
 import { setActiveNode, setFilter, resize } from '../Reducers/actions';
-
-const propTypes = {
-	filter: PropTypes.string.isRequired,
-	timestamp: PropTypes.string
-};
+import Filter from './filter';
 
 export default class Header extends React.PureComponent {
+	static propTypes = {
+		filter: PropTypes.string.isRequired,
+		timestamp: PropTypes.string
+	};
+
 	componentDidMount() {
 		resize();
 	}
@@ -29,5 +29,3 @@ export default class Header extends React.PureComponent {
 		);
 	}
 }
-
-Header.propTypes = propTypes;
