@@ -79,18 +79,20 @@ export default class TreeContainer extends React.PureComponent {
 		this.setClassName(root);
 
 		return (
-			<AnimatedTree
-				data={root}
-				height={this.props.height}
-				width={this.props.width}
-				gProps={{
-					className: 'node',
-					onClick: this.handleClick
-				}}
-				textProps={{
-					dy: 3.5
-				}}
-				steps={30}/>
+			<main>
+				<AnimatedTree
+					data={root}
+					height={this.props.height}
+					width={this.props.width}
+					gProps={{
+						className: 'node',
+						onClick: this.handleClick
+					}}
+					textProps={{
+						dy: 3.5
+					}}
+					steps={30}/>
+			</main>
 		);
 	}
 }

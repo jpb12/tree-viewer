@@ -20,12 +20,12 @@ export default class Header extends React.PureComponent {
 
 	render() {
 		return (
-			<div id="header">
+			<header id="header">
 				<Filter filter={this.props.filter}/>
 				<button onClick={this.handleClick}>Reset</button>
 				<a href="https://github.com/jpb12/tree-viewer">View Source</a>
 				<span>Last Updated: {this.props.timestamp}</span>
-			</div>
+			</header>
 		);
 	}
 }
