@@ -22,7 +22,7 @@ export default class TreeContainer extends React.PureComponent {
 			return json;
 		}
 
-		for (let i = 0; i < json.children.length; i++) {
+		for (let i = 0; i < json.children?.length; i++) {
 			const childJson = this.getRoot(json.children[i]);
 			if (childJson) {
 				return childJson;
@@ -35,7 +35,7 @@ export default class TreeContainer extends React.PureComponent {
 	buildSubTree(root) {
 		let newChildren = [];
 
-		for (let i = 0; i < root.children.length; i++) {
+		for (let i = 0; i < root.children?.length; i++) {
 			const child = this.buildSubTree(root.children[i]);
 			if (child) {
 				newChildren.push(child);
@@ -54,9 +54,7 @@ export default class TreeContainer extends React.PureComponent {
 	}
 
 	setClassName(node) {
-		if (node.children) {
-			node.children.forEach(this.setClassName, this);
-		}
+		node.children?.forEach(this.setClassName, this);
 
 		if (!this.props.filter) {
 			return;
