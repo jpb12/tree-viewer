@@ -25,7 +25,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.9",
-    "react-tree-graph": "^7.0.4",
+    "react-tree-graph": "^7.0.6",
     "redux": "^4.2.0"
   },
   "devDependencies": {
