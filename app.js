@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDom from 'react-dom';
-import { connect, Provider } from 'react-redux';
+import { Provider, useSelector } from 'react-redux';
 import Header from './Components/header';
 import TreeContainer from './Components/treeContainer';
 import json from './json';
@@ -12,30 +11,20 @@ import './style.css';
 
 window.onresize = resize;
 
-class App extends React.PureComponent {
-	static propTypes = {
-		activeNode: PropTypes.string,
-		filter: PropTypes.string.isRequired,
-		height: PropTypes.number.isRequired,
-		width: PropTypes.number.isRequired
-	};
-
-	render() {
-		return (
-			<div id="container">
-				<Header filter={this.props.filter} timestamp={json.timestamp}/>
-				<TreeContainer
-					activeNode={this.props.activeNode}
-					data={json}
-					filter={this.props.filter}
-					height={this.props.height}
-					width={this.props.width}/>
-			</div>
-		);
-	}
+function App() {
+	const state = useSelector(state => state);
+	return (
+		<div id="container">
+			<Header filter={state.filter} timestamp={json.timestamp}/>
+			<TreeContainer
+				activeNode={state.activeNode}
+				data={json}
+				filter={state.filter}
+				height={state.height}
+				width={state.width}/>
+		</div>
+	);
 }
-
-App = connect(state => state)(App);
 
 ReactDom.render(
 	<Provider store={Store}>
