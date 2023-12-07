@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { Provider, useSelector } from 'react-redux';
 import Header from './Components/header';
 import TreeContainer from './Components/treeContainer';
@@ -26,9 +26,9 @@ function App() {
 	);
 }
 
-ReactDom.render(
+const root = createRoot(document.getElementById('app'));
+root.render(
 	<Provider store={Store}>
 		<App/>
-	</Provider>,
-	document.getElementById('app')
+	</Provider>
 );
